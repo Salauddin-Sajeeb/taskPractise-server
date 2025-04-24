@@ -25,11 +25,11 @@ const run = async () => {
     const db = client.db('todo');
     const taskCollection = db.collection('tasks');
 
-     app.get('/task', async (req, res) => {
-       const cursor = taskCollection.find({});
-       const tasks = await cursor.toArray();
-       res.send({ status: true, data: tasks });
-     });
+    //  app.get('/task', async (req, res) => {
+    //    const cursor = taskCollection.find({});
+    //    const tasks = await cursor.toArray();
+    //    res.send({ status: true, data: tasks });
+    //  });
 
     app.get('/tasks', async (req, res) => {
       let query = {};
