@@ -21,7 +21,7 @@ const client = new MongoClient(uri, {
 const run = async () => {
   
   try {
-    //await client.connect();
+    await client.connect();
     const db = client.db('todo');
     const taskCollection = db.collection('tasks');
 
